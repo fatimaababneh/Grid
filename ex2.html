@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise #2 grid advance</title>
+    <style>
+
+        .div{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 1em;
+                grid-auto-rows: minmax(100px,auto);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .wrapper>div{
+            background-color: rgb(235, 234, 232);
+            padding: 0.5em;
+            
+        }
+        .nested{
+            grid-template-columns: repeat(2,2fr);
+            /* grid-auto-rows: minmax(auto); */
+            padding:10px;
+            
+        }
+        .nested>div{
+
+        background-color: rgb(158, 154, 154);
+        gap:0.5em;
+        }
+        .nested1{
+
+            gap:0.5em;
+            display: grid;
+        grid-template-columns: repeat(2);
+        grid-auto-rows: minmax(60px,auto);
+    }
+    .nested1>div{
+        background-color: rgb(158, 154, 154);
+        padding-left: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper div">
+        <div>item1 </div>
+        <div class="nested div">
+            <div>sub1</div>
+            <div>sub2</div>
+            <div>sub3</div>
+            <div>sub4</div>
+        </div>
+        <div class="nested div" >
+            <div>sub1</div>
+            <div>sub2</div>
+            <div>sub3</div>
+            <div>sub4</div>
+        </div>
+        <div>item4</div>
+        <div>item5</div>
+        <div class="nested1 ">
+            <div>sub1</div>
+            <div>sub2</div>
+        </div>
+
+        <div class="div nested">
+        <div>sub1</div>
+        <div>sub2</div>
+    </div>
+        <div>item8</div>
+        <div class="nested div">
+            <div>sub1</div>
+            <div>sub2</div>
+            <div>sub3</div>
+            <div>sub4</div>
+        </div>
+        <div>item10</div>
+        <div class="nested div">
+            <div>sub1</div>
+            <div>sub2</div>
+            <div>sub3</div>
+            <div>sub4</div>
+        </div>
+        <div>item12</div>
+    </div>
+</body>
+</html>

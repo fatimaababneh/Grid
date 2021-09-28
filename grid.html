@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .div{
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            gap: 1em;
+            /* height: inherit; */
+            grid-auto-rows: minmax(100px,auto);
+        }
+        .wrapper>div{
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper>div:nth-child(odd){
+            background: #ddd;
+
+        }
+        .nested{
+         display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:1em;
+        grid-auto-rows: minmax(auto,auto);
+        }
+        .nested >div{
+        border: #333 1.8px solid;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper div">
+        <div>You can do it Our home planet Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70% of Earth's surface.</div>
+        <div>You can do it Our home planet Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70% of Earth's surface.</div>
+        <div>You can do it Our home planet Earth is a rocky, terrestrial planet. It has a solid and</div>
+        <div>You can do it </div>
+        <div>You can do it 3</div>
+        <div>You can do it 4</div>
+        <div>You can do it 5</div>
+        <div>You can do it 6</div>
+        <div class="nested">
+        <div>lecture</div>
+        <div>lecture</div>
+        <div>lecture</div>
+        </div>
+    </div>
+    
+</body>
+</html>
